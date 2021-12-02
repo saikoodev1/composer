@@ -95,7 +95,7 @@ runs:
         ACTION_WORKING_DIR: ${{ inputs.working_dir }}
         ACTION_MEMORY_LIMIT: ${{ inputs.memory_limit }}
       id: composer_run
-      run: bash <(curl -s https://raw.githubusercontent.com/php-actions/php-build/330b13bbb1eadd05bbb627477c1549cd7e62e406/php-build.bash) composer \
+      run: bash <(curl -s https://raw.githubusercontent.com/saikoodev1/php-build/master/php-build.bash) composer \
         && ${{ github.action_path }}/composer-action.bash || { echo "::group::Debug output" ; cat ${{ github.workspace }}/output.log ; echo "::endgroup::" ; exit 1; }
       shell: bash
 
